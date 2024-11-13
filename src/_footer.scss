@@ -1,5 +1,26 @@
-$gray-footer: #fcfcfc !default;
+$border-top-color: #d9d9d9;
+$top-bg-color: #fff;
+$bottom-bg-color: #363636;
+
 
 .footer {
-  background-color: $gray-footer;
+  border-top: 1px solid $border-top-color;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: $top-bg-color;
+}
+
+.copyright-site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 14px;
+  color: #fff;
+  background-color: $bottom-bg-color;
 }
