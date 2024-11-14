@@ -17,9 +17,7 @@ import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
-import messages from './Footer.messages';
-import LanguageSelector from './LanguageSelector';
-ensureConfig(['LMS_BASE_URL', 'LOGO_TRADEMARK_URL'], 'Footer component');
+ensureConfig(['LMS_BASE_URL', 'LOGO_TRADEMARK_URL', 'FOOTER_URL'], 'Footer component');
 var EVENT_NAMES = {
   FOOTER_LINK: 'edx.bi.footer.link'
 };
@@ -46,12 +44,6 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-        supportedLanguages = _this$props.supportedLanguages,
-        onLanguageSelected = _this$props.onLanguageSelected,
-        logo = _this$props.logo,
-        intl = _this$props.intl;
-      var showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
       var config = this.context.config;
       return /*#__PURE__*/React.createElement("footer", {
         role: "contentinfo",
