@@ -38,7 +38,32 @@ class SiteFooter extends React.Component {
       <footer
         role="contentinfo"
         className="footer">
-        <div className="footer-top"></div>
+        <div className="footer-top">
+          <nav>
+            <ol>
+              <li>
+                <a href={`${config.LMS_BASE_URL}/privacy`}>
+                  {intl.formatMessage(messages.privacyPolicyLinkLabel)}
+                </a>
+              </li>
+              <li>
+                <a href={`${config.LMS_BASE_URL}/tos`}>
+                  {intl.formatMessage(messages.termsOfServiceLinkLabel)}
+                </a>
+              </li>
+              <li>
+                <a href={`${config.LMS_BASE_URL}/accessibility`}>
+                  {intl.formatMessage(messages.accessibilityLinkLabel)}
+                </a>
+              </li>
+              <li>
+                <a href={`${config.LMS_BASE_URL}/help`}>
+                  {intl.formatMessage(messages.termsOfServiceLinkLabel)}
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
         <div className="copyright-site">{config.FOOTER_URL} ©{new Date().getFullYear()}</div>
       </footer>
     );
