@@ -50,7 +50,15 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
         className: "footer"
       }, /*#__PURE__*/React.createElement("div", {
         className: "footer-top"
-      }), /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React.createElement("nav", null, /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+        href: "".concat(config.LMS_BASE_URL, "/privacy")
+      }, intl.formatMessage(messages.privacyPolicyLinkLabel))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+        href: "".concat(config.LMS_BASE_URL, "/tos")
+      }, intl.formatMessage(messages.termsOfServiceLinkLabel))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+        href: "".concat(config.LMS_BASE_URL, "/accessibility")
+      }, intl.formatMessage(messages.accessibilityLinkLabel))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+        href: "".concat(config.LMS_BASE_URL, "/help")
+      }, intl.formatMessage(messages.termsOfServiceLinkLabel)))))), /*#__PURE__*/React.createElement("div", {
         className: "copyright-site"
       }, config.FOOTER_URL, " \xA9", new Date().getFullYear()));
     }

@@ -40,6 +40,16 @@ var messages = defineMessages({
     defaultMessage: 'Terms of Service',
     description: 'Label for button that links to the terms of service page'
   },
+  accessibilityLinkLabel: {
+    id: 'footer.legalLinks.a11yPolicy',
+    defaultMessage: 'Accessibility Policy',
+    description: 'Label for button that links to the accessibility policy page'
+  },
+  helpLinkLabel: {
+    id: 'footer.connectLinks.help',
+    defaultMessage: 'Help',
+    description: 'Label for button that links to the help page'
+  },
   privacyPolicyLinkLabel: {
     id: 'authoring.footer.privacyPolicy.link.label',
     defaultMessage: 'Privacy Policy',

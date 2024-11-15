@@ -1,6 +1,8 @@
 $border-top-color: #d9d9d9;
 $top-bg-color: #fff;
 $bottom-bg-color: #363636;
+$link-color: #374151;
+$link-hover-color: #111827;
 
 
 .footer {
@@ -13,6 +15,31 @@ $bottom-bg-color: #363636;
   align-items: center;
   height: 70px;
   background-color: $top-bg-color;
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 12px;
+      font-size: 16px;
+      line-height: 24px;
+
+      a {
+        color: $link-color;
+        text-decoration: none;
+
+        &:hover {
+          color: $link-hover-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 .copyright-site {
