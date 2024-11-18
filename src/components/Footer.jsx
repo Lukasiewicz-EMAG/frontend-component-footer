@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, useIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
 
+import messages from './Footer.messages';
+import LanguageSelector from './LanguageSelector';
+
 ensureConfig([
   'LMS_BASE_URL',
   'LOGO_TRADEMARK_URL',
-  'FOOTER_URL',
 ], 'Footer component');
 
 const EVENT_NAMES = {
@@ -32,38 +34,20 @@ class SiteFooter extends React.Component {
   }
 
   render() {
+    const {
+      supportedLanguages,
+      onLanguageSelected,
+      logo,
+      intl,
+    } = this.props;
+    const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const { config } = this.context;
-    const intl = useIntl();
 
     return (
       <footer
         role="contentinfo"
         className="footer">
         <div className="footer-top">
-          <nav>
-            <ol>
-              <li>
-                <a href={`${config.LMS_BASE_URL}/privacy`}>
-                  {intl.formatMessage(messages.privacyPolicyLinkLabel)}
-                </a>
-              </li>
-              <li>
-                <a href={`${config.LMS_BASE_URL}/tos`}>
-                  {intl.formatMessage(messages.termsOfServiceLinkLabel)}
-                </a>
-              </li>
-              <li>
-                <a href={`${config.LMS_BASE_URL}/accessibility`}>
-                  {intl.formatMessage(messages.accessibilityLinkLabel)}
-                </a>
-              </li>
-              <li>
-                <a href={`${config.LMS_BASE_URL}/help`}>
-                  {intl.formatMessage(messages.termsOfServiceLinkLabel)}
-                </a>
-              </li>
-            </ol>
-          </nav>
         </div>
         <div className="copyright-site">{config.FOOTER_URL} ©{new Date().getFullYear()}</div>
       </footer>
