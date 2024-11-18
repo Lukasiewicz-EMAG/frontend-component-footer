@@ -13,11 +13,13 @@ function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new T
 function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, useIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
-ensureConfig(['LMS_BASE_URL', 'LOGO_TRADEMARK_URL', 'FOOTER_URL'], 'Footer component');
+import messages from './Footer.messages';
+import LanguageSelector from './LanguageSelector';
+ensureConfig(['LMS_BASE_URL', 'LOGO_TRADEMARK_URL'], 'Footer component');
 var EVENT_NAMES = {
   FOOTER_LINK: 'edx.bi.footer.link'
 };
@@ -44,22 +46,19 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this$props = this.props,
+        supportedLanguages = _this$props.supportedLanguages,
+        onLanguageSelected = _this$props.onLanguageSelected,
+        logo = _this$props.logo,
+        intl = _this$props.intl;
+      var showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
       var config = this.context.config;
-      var intl = useIntl();
       return /*#__PURE__*/React.createElement("footer", {
         role: "contentinfo",
         className: "footer"
       }, /*#__PURE__*/React.createElement("div", {
         className: "footer-top"
-      }, /*#__PURE__*/React.createElement("nav", null, /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "".concat(config.LMS_BASE_URL, "/privacy")
-      }, intl.formatMessage(messages.privacyPolicyLinkLabel))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "".concat(config.LMS_BASE_URL, "/tos")
-      }, intl.formatMessage(messages.termsOfServiceLinkLabel))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "".concat(config.LMS_BASE_URL, "/accessibility")
-      }, intl.formatMessage(messages.accessibilityLinkLabel))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "".concat(config.LMS_BASE_URL, "/help")
-      }, intl.formatMessage(messages.termsOfServiceLinkLabel)))))), /*#__PURE__*/React.createElement("div", {
+      }), /*#__PURE__*/React.createElement("div", {
         className: "copyright-site"
       }, config.FOOTER_URL, " \xA9", new Date().getFullYear()));
     }
