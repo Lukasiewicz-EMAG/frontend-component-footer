@@ -51,23 +51,23 @@ class SiteFooter extends React.Component {
         <nav>
             <ol>
               <li>
-                <a href="">
+                <a href={`${config.LMS_BASE_URL}/privacy`}>
                   {intl.formatMessage(messages.privacyPolicyLinkLabel)}
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href={`${config.LMS_BASE_URL}/tos`}>
                   {intl.formatMessage(messages.termsOfServiceLinkLabel)}
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href={`${config.LMS_BASE_URL}/accessibility`}>
                   {intl.formatMessage(messages.accessibilityLinkLabel)}
                 </a>
               </li>
               <li>
-                <a href="">
-                  {intl.formatMessage(messages.termsOfServiceLinkLabel)}
+                <a href={`${config.LMS_BASE_URL}/help`}>
+                  {intl.formatMessage(messages.helpLinkLabel)}
                 </a>
               </li>
             </ol>
