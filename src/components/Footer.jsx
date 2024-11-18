@@ -48,6 +48,30 @@ class SiteFooter extends React.Component {
         role="contentinfo"
         className="footer">
         <div className="footer-top">
+        <nav>
+            <ol>
+              <li>
+                <a href="">
+                  {intl.formatMessage(messages.privacyPolicyLinkLabel)}
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  {intl.formatMessage(messages.termsOfServiceLinkLabel)}
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  {intl.formatMessage(messages.accessibilityLinkLabel)}
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  {intl.formatMessage(messages.termsOfServiceLinkLabel)}
+                </a>
+              </li>
+            </ol>
+          </nav>
         </div>
         <div className="copyright-site">{config.FOOTER_URL} ©{new Date().getFullYear()}</div>
       </footer>

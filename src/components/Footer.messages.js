@@ -71,21 +71,6 @@ const messages = defineMessages({
     defaultMessage: 'Legal',
     description: 'Heading for the legal links section of the footer.',
   },
-  'footer.legalLinks.termsOfService': {
-    id: 'footer.legalLinks.termsOfService',
-    defaultMessage: 'Terms of Service & Honor Code',
-    description: 'The label for the link to the edX terms of service page.',
-  },
-  'footer.legalLinks.privacyPolicy': {
-    id: 'footer.legalLinks.privacyPolicy',
-    defaultMessage: 'Privacy Policy',
-    description: 'The label for the link to the edX privacy policy page.',
-  },
-  'footer.legalLinks.a11yPolicy': {
-    id: 'footer.legalLinks.a11yPolicy',
-    defaultMessage: 'Accessibility Policy',
-    description: 'The label for the link to the edX accessibility policy page.',
-  },
   'footer.legalLinks.trademarkPolicy': {
     id: 'footer.legalLinks.trademarkPolicy',
     defaultMessage: 'Trademark Policy',
@@ -110,11 +95,6 @@ const messages = defineMessages({
     id: 'footer.connectLinks.contact',
     defaultMessage: 'Contact Us',
     description: 'The label for the link to the contact edX page.',
-  },
-  'footer.connectLinks.help': {
-    id: 'footer.connectLinks.help',
-    defaultMessage: 'Help Center',
-    description: 'The label for the link to the edX help center.',
   },
   'footer.connectLinks.mediaKit': {
     id: 'footer.connectLinks.mediaKit',
@@ -150,6 +130,26 @@ const messages = defineMessages({
     id: 'footer.ariaLabel',
     defaultMessage: 'Page Footer',
     description: 'aria-label for the footer component',
+  },
+  termsOfServiceLinkLabel: {
+    id: 'footer.legalLinks.termsOfService',
+    defaultMessage: 'Terms of Service',
+    description: 'The label for the link to the edX terms of service page.',
+  },
+  privacyPolicyLinkLabel: {
+    id: 'footer.legalLinks.privacyPolicy',
+    defaultMessage: 'Privacy Policy',
+    description: 'The label for the link to the edX privacy policy page.',
+  },
+  accessibilityLinkLabel: {
+    id: 'footer.legalLinks.a11yPolicy',
+    defaultMessage: 'Accessibility Policy',
+    description: 'The label for the link to the edX accessibility policy page.',
+  },
+  helpLinkLabel: {
+    id: 'footer.connectLinks.help',
+    defaultMessage: 'Help',
+    description: 'The label for the link to the edX help center.',
   },
 });
 
