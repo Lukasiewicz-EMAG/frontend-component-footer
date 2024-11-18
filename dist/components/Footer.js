@@ -13,7 +13,7 @@ function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new T
 function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { injectIntl, useIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
@@ -45,6 +45,7 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var config = this.context.config;
+      var intl = useIntl();
       return /*#__PURE__*/React.createElement("footer", {
         role: "contentinfo",
         className: "footer"
